@@ -7,12 +7,12 @@ spring:
   datasource:
     username: 'postgres'
     url: jdbc:postgresql://localhost:5432/customer
-    password: 'admin'
-    jpa:
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-          formst_sql: 'true'
+    password: 'postgres'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
       hibernate:
-        ddl-auto: update
-      show-sql: 'true'
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
